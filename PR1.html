@@ -1,0 +1,485 @@
+<html>
+	<head>
+	<title>OBS</title>
+
+	<table border="1" style="width:100%">
+			<tr>
+			<td style="font-size:500%;color:red;text-align:center;">ONLINE BOOK SALES</td>
+			</tr>
+	</table>
+<style> 
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+</style>
+<form>
+  <input type="text" name="search" placeholder="Search your book..">
+	<input name="has_fulltext" type="checkbox" value="true" id="ftokenstop">
+    <label for="ftokenstop" style=color:white;font-size:150%>Only e-Books</label>
+	<input name="has_fulltext" type="checkbox" value="true" id="ftokenstop">
+    <label for="ftokenstop" style=color:white;font-size:150%>PDF</label>
+	<input name="has_fulltext" type="checkbox" value="true" id="ftokenstop">
+    <label for="ftokenstop" style=color:white;font-size:150%>Author</label>
+</form>
+	<style type="text/css">/*for fixed background as per screen resolution*/
+html, 
+body {
+background-image: url(https://www.wired.com/wp-content/uploads/2016/08/Yangzhou-Zhongshuge-featured.jpg);
+-moz-background-size: cover;
+-webkit-background-size: cover;
+background-size: cover;
+background-position: top center !important;
+background-repeat: no-repeat !important;
+background-attachment: fixed;
+}
+table thead {
+  position: fixed;
+}
+</style>
+</head>
+<body>
+<style>/*for dropdown*/
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color:#00ccff}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color:#ff0000;
+}
+</style>
+<li>
+<div class="dropdown">
+  <button class="dropbtn">Home</button>
+  <div class="dropdown-content">
+    <a href="#">About us </a>
+    <a href="#">Latest Books</a>
+    <a href="#">Recent Books</a>
+  </div>
+</div>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="dropdown">
+  <button class="dropbtn">Genre</button>
+  <div class="dropdown-content">
+    <a href="Art.html">Art</a>
+    <a href="sci.html">Sci-Fic</a>
+    <a href="fan.html">Fantacy</a>
+	<a href="bio.html">Biographies</a>
+	<a href="reci.html">Recipies</a>
+	<a href="#">Romantic</a>
+	<a href="tb.html">TextBooks</a>
+	<a href="mor.html">Moral</a>
+	<a href="his.html">History</a>
+	<a href="med.html">Medicine</a>
+	<a href="reg.html">Religion</a>
+	<a href="mys.html">Mysteries</a>
+	<a href="gam.html">Games</a>
+	<a href="scin.html">Science</a>
+  </div>
+</div>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="dropdown">
+  <button class="dropbtn">Book Cart</button>
+  <div class="dropdown-content">
+    <a href="#">view Cart </a>
+    </div>
+</div>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="dropdown">
+  <button class="dropbtn">FeedBack</button>
+  <div class="dropdown-content">
+    <a href="#">About Books</a>
+    <a href="#">About Author</a>
+  </div>
+</div>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="dropdown">
+  <button class="dropbtn">Help Desk</button>
+  <div class="dropdown-content">
+    <a href="#">About Books</a> 
+    <a href="#">About Writer</a>
+	<a href="#">About gener</a>
+	<a href="#">About Deals</a>
+	<a href="#">About Readers</a>
+  </div>
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<style>
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.6s;
+    animation-name: animatetop;
+    animation-duration: 0.6s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+     right: 25px;
+    font-size: 36px;
+    color: white;
+}
+.cancelbtn {
+    color: white;
+    float: center;
+    font-size: 15px;
+}
+
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: red;
+    color: white;
+}
+
+.modal-body {padding: 26px 16px;}
+
+</style>
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Log-Out</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>make here the user id</h2>
+    </div>
+    <div class="modal-body">
+      <center>
+      <p>Do you want logout from this site</p>
+	  <style>
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+</style>
+<button onclick="myFunction()">Logout</button>
+
+<div id="snackbar">Thanks for visting our site</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("snackbar")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="span" class="cancelbtn" onclick="cancel"&times;>cancel</button>
+    </center>
+    </div>
+  </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</li>
+<br><br><br><br><br><br><br><br>
+<style>
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+</style>
+<p style="color:white;font-size:150%" >Latest Books </p>
+<div class="tooltip"><a href="default.asp">
+  <img src="http://www.citymtnviews.com/books/book-web.jpg" alt="HTML tutorial" style="width:150px;height:160px;border:0;">
+</a>
+  <span class="tooltiptext">
+<p>History of Jefferson Courty<br>
+Author: Carol Lomond<br>
+publisher: Clearfield</p><br>
+</span>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="tooltip"><a href="default.asp">
+  <img src="https://images-na.ssl-images-amazon.com/images/I/61FWW7UCquL._SX258_BO1,204,203,200_.jpg" alt="HTML tutorial" style="width:150px;height:160px;border:0;">
+</a>
+  <span class="tooltiptext"><p>
+  Title:Coffee <br>
+Author: Amish Tripathi<br>
+Publisher:Westland Limited</p>
+</span>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="tooltip"><a href="default.asp">
+  <img src="https://cdn.itorrent.ws/resize/uploads/cover/1454235144IbpU3T7UwW.jpg" alt="HTML tutorial" style="width:150px;height:160px;border:0;">
+</a>
+  <span class="tooltiptext"><p> Drawing on rightside of Brain <br>
+Author:Betty Edwards<br>
+publisher: Harper<br> </p>
+</span>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="tooltip"><a href="default.asp">
+  <img src="https://upload.wikimedia.org/wikipedia/en/1/1d/Twilightbook.jpg" alt="HTML tutorial" style="width:150px;height:160px;border:0;">
+</a>
+  <span class="tooltiptext"><p> Twilight<br>
+Author:Stephenie Meyer<br>
+publisher: Little, Brown Books for Young Readers<br> </p>
+</span>
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="tooltip"><a href="default.asp">
+  <img src="http://19xnly3cl9rt2qvk731lwbxpeay.wpengine.netdna-cdn.com/wp-content/uploads/2014/05/HPLockwoodandCo.jpg" alt="HTML tutorial" style="width:150px;height:160px;border:0;">
+</a>
+  <span class="tooltiptext"><p>Screaming Staircase<br>
+Author:Jonathan Stroud<br>
+publisher:	Random House<br> </p>
+</span>
+</div>
+<br><br><br><br><br>
+<p style="color:white;font-size:150%" >Popular Books </p>
+<div class="tooltip"><a href="default.asp">
+  <img src="http://astralint.com/images/bookimage/9788170356738.jpg" alt="HTML tutorial" style="width:150px;height:160px;border:0;">
+</a>
+  <span class="tooltiptext"><p>
+  Title : Delicious Seafood Recipes   <br>
+Author : Anshuman D. Dholakia<br>
+Publisher : December
+<br>
+</p>
+</span>
+</div>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="tooltip"><a href="default.asp">
+  <img src="http://thumbs4.picclick.com/d/l400/pict/172269152079_/The-Quest-for-Paradise-The-Return-to-the.jpg" alt="HTML tutorial" style="width:150px;height:160px;border:0;">
+</a>
+  <span class="tooltiptext"><p>The Quest for Paradise<br>
+Author: Susan E. Linville<br>
+publisher:Scholastic Inc</p>
+</span>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="tooltip"><a href="default.asp">
+  <img src="https://s-media-cache-ak0.pinimg.com/736x/0d/7f/45/0d7f451ffcb2e398eb328fbc2467183c.jpg" alt="HTML tutorial" style="width:150px;height:160px;border:0;">
+</a>
+  <span class="tooltiptext"><p>Story of Art<br>
+Author: Usborne<br>
+publisher:National Gallery London</p>
+</span>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="tooltip"><a href="default.asp">
+  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/TheElegantUniverse.jpg/220px-TheElegantUniverse.jpg" alt="HTML tutorial" style="width:150px;height:160px;border:0;">
+</a>
+  <span class="tooltiptext"><p>The Elegant Universe<br>
+Author: Brain Grene<br>
+publisher:W. W. Norton</p>
+</span>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="tooltip"><a href="default.asp">
+  <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTk_yQ7lMRSbufI7q12iMyvteOk6Y2X86GURmZLMcHonNwpXlMHug" alt="HTML tutorial" style="width:150px;height:160px;border:0;">
+</a>
+  <span class="tooltiptext"><p>Anno Dracula<br>
+Author: Johnny Alucard<br>
+publisher: Simon & Schuster</p>
+</span>
+</div>
+</body>
+</html>

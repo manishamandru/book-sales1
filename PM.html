@@ -1,0 +1,477 @@
+<html>
+	<head>
+	<title>OBS</title>
+	<div id="headerLogin" align="Right" style="font-size:29px";>
+	
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+   &nbsp;     
+ <button onclick="openNav().style.display='block'" style="width:auto;" > SignUp</button>
+        </div>
+<style>/*for login*/
+/* Full-width input fields */
+input[type= text], input[type= password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+<div align=center>
+<div id="id01" class="modal"> 
+  <form class="modal-content animate" action="PR.html">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="https://cdn3.iconfinder.com/data/icons/rcons-user-action/32/boy-512.png" alt="Avatar" class="avatar">
+    </div>
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+      <br>
+	  <br>
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        <br>
+		<br>
+		<button onclick=type:submit value="login.php" style="width:auto;">Login</button>
+        <button onclick="openNav().style.display='block'" style="width:auto;" > SignUp</button>
+	   <br>
+	   <p> If you dont have an Account then click on Sign-Up</p>
+      <input type="checkbox" checked=""> Remember me
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+	
+<style>
+input[type= text], input[type= password]{
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: url(http://jproto2.biblioteia.com/images/bt_property/3/original-1460986613-biblio9.jpg);
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: top center !important;
+	background-repeat: no-repeat !important;
+	background-attachment: fixed;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    text-align:left;
+}
+
+.sidenav label {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s
+
+}
+
+.sidenav label:hover{
+    color: red;
+}
+
+.sidenav a:hover{
+    color: red;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    color: white;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<marquee style="color:blue; font-size:36px;">To Access the gener you must register to this site</marquee>
+<center> 
+   <label>First Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" placeholder="Enter Firstname" name="fname" required><br>
+  </label>
+  <label>Last Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" placeholder="Enter Lastname" name="lname" required><br>
+  </label>
+   <label>Phone Number &nbsp;
+  <input type="text" placeholder="Enter Phone Number" name="Ph.No" maxlength="10" required>
+  </label>
+</center> 
+  <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Gender 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="radio" name=" Gender " value = " M">Male 
+  <input type="radio" name=" Gender " value = " F" >Female<br>
+  </label>
+  <center>
+  <label>Username &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" placeholder="Enter Username" name="uname" required><br>
+  </label>
+  <label>Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="password" placeholder="Enter Password" name="psw" required><br>
+  </label>
+  <label>E-mail &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" placeholder="Enter E-mail" name="E-mail" required><br>
+  </label>
+  <label>Address &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" placeholder="Enter Address" name="Address" required><br>
+  </label>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <button onclick=type:submit value="user.php" style="width:auto;" > SignUp</button>
+ <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <button type="button" class="cancelbtn" onclick="closeNav()"&times;>
+  Cancel
+ </button>
+</div>
+</center>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+	<table border="1" style="width:100%">
+			<tr>
+			<td style="font-size:500%;color:red;text-align:center;">ONLINE BOOK SALES</td>
+			</tr>
+	</table>
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a.header {
+  background-color: #e2e2e2;
+  cursor: default;
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for books.." title="Type in a book name">
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+
+        }
+    }
+}
+</script>
+	<input name="has_fulltext" type="checkbox" value="true" id="ftokenstop">
+    <label for="ftokenstop" style=color:white;font-size:150%>Only e-Books</label>
+	<input name="has_fulltext" type="checkbox" value="true" id="ftokenstop">
+    <label for="ftokenstop" style=color:white;font-size:150%>PDF</label>
+
+<style type="text/css">/*for fixed background as per screen resolution*/
+html, 
+body {
+background-image: url(https://lh3.googleusercontent.com/-pBGMMoW1_N4/VuMQ2oT3GDI/AAAAAAAAcQw/dk4Sl5Kp-3saYyuqh5BHEOE10IIMh6cuwCL0B/s0-d/Knowledge.jpg);
+-moz-background-size: cover;
+-webkit-background-size: cover;
+background-size: cover;
+background-position: top center !important;
+background-repeat: no-repeat !important;
+background-attachment: fixed;
+}
+table thead {
+  position: fixed;
+}
+</style>
+</head>
+<body>
+<style>/*for dropdown*/
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color:#00ccff}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color:#ff0000;
+}
+</style>
+<li>
+<div class="dropdown">
+  <button class="dropbtn">Home</button>
+  <div class="dropdown-content">
+    <a href="aboutus.html">About us </a>
+    <a href="#">Latest Books</a>
+    <a href="#">Recent Books</a>
+  </div>
+</div>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="dropdown">
+  <button class="dropbtn">Gener</button>
+  <div class="dropdown-content">
+    <a onclick="openNav().style.display='block'" style="width:auto;">Art</a>
+    <a onclick="openNav().style.display='block'" style="width:auto;">Biographies</a>
+    <a onclick="openNav().style.display='block'" style="width:auto;">Fantacy</a>
+	<a onclick="openNav().style.display='block'" style="width:auto;">Games</a>
+	<a onclick="openNav().style.display='block'" style="width:auto;">History</a>
+	<a onclick="openNav().style.display='block'" style="width:auto;">Medicine</a>
+	<a onclick="openNav().style.display='block'" style="width:auto;">Moral</a>
+	<a onclick="openNav().style.display='block'" style="width:auto;">Mysteries</a>
+	<a onclick="openNav().style.display='block'" style="width:auto;">Recipies</a>
+	<a onclick="openNav().style.display='block'" style="width:auto;">Religion</a>
+	<a onclick="openNav().style.display='block'" style="width:auto;">Romantic</a>
+	<a onclick="openNav().style.display='block'" style="width:auto;">TextBooks</a>
+	<a onclick="openNav().style.display='block'" style="width:auto;">Sci-fic</a>
+	<a onclick="openNav().style.display='block'" style="width:auto;">Science</a>
+  </div>
+</div>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="dropdown">
+  <button class="dropbtn">Book Cart</button>
+  <div class="dropdown-content">
+    <a onclick="openNav().style.display='block'" style="width:auto;">New Cart </a>
+    <a onclick="openNav().style.display='block'" style="width:auto;">Old Cart</a>
+    <a onclick="openNav().style.display='block'" style="width:auto;">Read Later</a>
+	<a onclick="openNav().style.display='block'" style="width:auto;">Liked</a>
+	<a onclick="openNav().style.display='block'" style="width:auto;">Favourates</a>
+    <a onclick="openNav().style.display='block'" style="width:auto;">Purchased</a>
+    <a onclick="openNav().style.display='block'" style="width:auto;">Leased</a>	
+    <a onclick="openNav().style.display='block'" style="width:auto;">Sold</a>
+	</div>
+</div>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="dropdown">
+  <button class="dropbtn">FeedBack</button>
+  <div class="dropdown-content">
+    <a onclick="openNav().style.display='block'" style="width:auto;">About Books</a>
+    <a onclick="openNav().style.display='block'" style="width:auto;">About Author</a>
+  </div>
+</div>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="dropdown">
+  <button class="dropbtn">Help Desk</button>
+  <div class="dropdown-content">
+    <a href="#">About Books</a> 
+    <a onclick="openNav().style.display='block'" style="width:auto;">About Writer</a>
+	<a onclick="openNav().style.display='block'" style="width:auto;">About gener</a>
+	<a onclick="openNav().style.display='block'" style="width:auto;">About Deals</a>
+	<a href="#">About Readers</a>
+  </div>
+</div>
+</li> 
+  
+</body>
+</html>
